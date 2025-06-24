@@ -22,6 +22,10 @@ public class User {
         hp.microSDSlot();
         Laptop.audoJack();
         
+           // Implementing Abstraction
+        Laptop abs = new Lenovo();
+        abs.usbA(); // achieved abstraction
+        abs.usbC(); // achieved abstraction
     }
 
 }
