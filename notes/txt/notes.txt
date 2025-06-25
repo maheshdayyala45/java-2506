@@ -1,0 +1,220 @@
+12 June
+=======
+
+    -> Non-Static Variables - individual copies for each object
+
+    -> Static Variables - common copy for entire class
+
+    -> Static Blocks - This is the block of code, that gets executed when the class is loaded into
+        memory by JVM
+
+        -> initialize the Static Variables, eveb before main method is executed
+
+    -> Non-Static Blocks
+
+    -> Non-Static Methods Cannot be called in Static Methods
+
+    -> Static Methods Can be called in Non-Static Methods
+
+14 June
+=======    
+
+    -> Inheritance - Obtaining the traits and characteristics from an existing
+    class.
+    
+    -> According to our example, we want watchVideos() in multiple places
+    will introduce Inheritance
+
+    -> Types Of Inheritance
+
+        -> Single
+        -> Multiple  
+        -> Multi Level
+        -> Hirerarchial
+        -> Hybrid
+
+        -> NOTE: Java doesn't support multiple Inheritance with classes
+        it supports with Interfaces 
+
+    -> Single Inheritance
+        -> Inherit features from single parent class
+        -> child_class extends parent_class
+
+    -> Multi Level Inheritance
+        -> Inherit features from multi parent class
+        -> child_class extends parent_class extends super_parent
+
+    -> Multiple Inheritance
+        -> Java doesn't support multiple Inheritance with classes
+        -> Java supports multiple Inheritance with Interfaces
+        -> Using Classes Extends failed with Multiple Inheritance
+            -> class Admin extends Guest, VideoAdmin
+
+
+        -> Interfaces - We have abstract methods i.e methods without 
+        implementation
+        
+        -> Using Interfaces implments work with Multiple Inheritance
+            -> class VideoAdmin implements Watchable, Addable
+
+        -> Hirerarchial - Multiple classes inherit from same super class
+            -> use extends to achieve
+
+        -> Hybrid - Combination of single + mutiple / multilevel
+        
+
+19 June
+=======
+
+    -> Encapuslation
+
+        -> To achieve Encapuslation we need to know about ACCESS MODIFIERS/SPECIFIERS
+
+    -> Access Modifiers
+        -> are keywords, they control VISIBILITY of your program members
+            -> classes, methods, Variables, constructors etc
+        
+        -> We use Access Modifiers to enhance Security and determin scope of program members along with
+        enforcing Encapuslation
+
+    -> List of Access Modifiers
+
+        -> Public
+        -> private
+        -> Protected
+        -> Default
+
+    ->  NOTE: If you understand access modifiers well, using variables, the same concept extends to 
+        methods and constructors with slight differnce in Classes      
+
+    -> Access Modifiers with Classes
+
+        -> Top Level Classes can only be Public and Default(no modifier)
+
+        -> We cannot make Top Level Classes as Private or Protected
+
+        -> For inner classes (Nested Classess) we can use all 4 access modifiers
+
+        -> NOTE: Inside OuterClass, we can access all inner classes, regardless of modifier.
+
+
+    -> Encapuslation -  is the ability of an Object to hide it's data and methods from rest of world
+            -> Simple use private access modifier   
+
+        ->  Encapsulation refers to the process of binding data (variables) and methods 
+            that operate on the data into a single unit called a class.   
+
+        -> Encapsulation ensures that:
+                1. Data is protected from unauthorized access.
+                2. The implementation details are hidden, and only the essential features are exposed to the user.
+
+
+21 June
+=======
+
+    -> Constructors vs Setters
+
+                                        Constructors                   Setters 
+
+        -> Quick Initialization     -> Constructor (Good)       -> Setters (Needs Extra Steps)
+
+        -> Code Readability         -> For Small Objects        -> More Readable foor Large Objects
+
+        -> Validation Control       -> NO (only initialize)     -> Yes supports
+
+        -> Logging/Debugging        -> NO (only initialize)     -> We can log
+
+        -> Scalability              -> 50 fields - Messy        -> Clean & Maintainable
+
+        -> Real World Projects      -> Small Projects           -> Enterprise 
+
+        -> OOPS Principal           -> Not Following            -> Following (Encapsulation)
+
+
+    -> Interfaces 
+
+        -> Class - Blueprint of Object 
+
+        -> Interface - Blueprint of Class
+
+            -> Contain only abstract methods (methods without body)   
+            -> Contain Constants (Static and final variables)
+
+        -> Interfaces are like business contracts
+
+        -> In a contract i.e franchise we have only
+
+            -> High Level Info, not detailed Info
+
+        -> Interfaces will have 
+
+            -> WHAT TO DO
+            -> NOT HOW TO DO            
+
+
+        -> Classes will have
+
+            -> WHAT TO DO   
+            -> HOW TO DO            
+
+    -> Key Points about Interfaces
+
+        -> Specify the behavior that a class must implement
+
+        -> we use implements keyword with class 
+
+        -> Will help you achieve Following OOPS features Multiple Inheritance and Abstraction
+
+        -> Variables inside Interfaces can be only Public, Static & final
+
+        -> A class that implements an Interface, must provide implementation for all of implments
+            abstract methods
+
+        -> The above rules are applicable till Java 7
+
+        -> From Java 8 onwards we got some new features 
+
+            -> If we provide new abstract methods in Interfaces, it might affect all the
+             classes which implement this Interface
+
+            ->  To provide implementation we got two ways now
+
+                -> Default Methods - methods with default implementation
+                -> Static Methods -  methods that belong to Interface and can be called directly
+
+                NOTE: We cannot use default for class methods, only allowed for interfaces
+
+            ->     
+
+
+23 June
+=======
+
+    -> Concrete Classes - Where methods must have implementations
+
+    -> Interfaces - We have Abstract Methods Only till Java 7, from 8 onwards
+        we have Default methods(default implementations)
+
+    -> Abstract Classes - declared using abstract keyword, it can Contain
+        both abstract methods and concrete methods
+
+    -> NOTE: In abstract classes, we don't provide complete implementations of 
+        an interface, we can provide partial implementations and we leave
+        few implementations like methods as unimplemented.
+
+    -> RULES: 
+        -> We cannot create objects, for abstrct classes that Contain both
+            abstract and non-abstract methods
+
+        -> We can have non-abstract methods inside abstrct classes
+
+
+24 June
+=======
+
+    -> Encapsulation LAB implementation on LMS App
+
+25 June
+=======
+
+    -> Abstraction LAB implementation on LMS App    
